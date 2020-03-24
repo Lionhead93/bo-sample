@@ -1,11 +1,16 @@
-import Vue from "vue";
-import Vuex from "vuex";
+// Lib imports
+import Vue from 'vue'
+import Vuex from 'vuex'
 
-Vue.use(Vuex);
+// Store functionality
+import modules from './modules'
+import getters from './getters'
 
-export default new Vuex.Store({
-  state: {},
-  mutations: {},
-  actions: {},
-  modules: {}
-});
+Vue.use(Vuex)
+// Create a new store
+const store = new Vuex.Store({
+  getters,
+  modules
+})
+
+export default store
